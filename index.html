@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beautiful flowers delivered right to your doorstep.">
+    <meta name="keywords" content="flowers, delivery, bouquet, roses, gift">
+    <meta name="author" content="YourName">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.formsfree.com/forms.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">Flower Shop</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Beautiful Flowers Delivered to Your Door</h1>
+            <p>Explore our wide range of fresh flowers and make someone's day special.</p>
+            <a href="#products" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Flower Products -->
+    <section id="products" class="products-section">
+        <div class="product-list">
+            <div class="product-card">
+                <img src="rose.jpg" alt="Roses">
+                <h3>Roses</h3>
+                <p>Classic roses for every occasion.</p>
+                <button class="order-btn" onclick="openOrderForm('Roses')">Order Now</button>
+            </div>
+            <div class="product-card">
+                <img src="lilies.jpg" alt="Lilies">
+                <h3>Lilies</h3>
+                <p>Elegant lilies to brighten up any room.</p>
+                <button class="order-btn" onclick="openOrderForm('Lilies')">Order Now</button>
+            </div>
+            <div class="product-card">
+                <img src="tulips.jpg" alt="Tulips">
+                <h3>Tulips</h3>
+                <p>Colorful tulips to add joy to your day.</p>
+                <button class="order-btn" onclick="openOrderForm('Tulips')">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Modal -->
+    <div id="order-modal" class="order-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeOrderForm()">×</span>
+            <h2>Order Flowers</h2>
+            <form id="order-form" action="https://www.formsfree.com/forms?form_id=manebeap" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="flower">Flower Type</label>
+                <input type="text" id="flower" name="flower" readonly>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" required min="1">
+
+                <button type="submit" class="submit-btn">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Flower Shop. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
